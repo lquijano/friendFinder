@@ -1,4 +1,6 @@
-var friends = require("../data/friends");
+var friends = require("../db/friends");
+//should this be /db/connection??
+//this variable is reauiroing that for the routes these files be leverages//used?
 
 module.exports = function(app){
   app.get("/api/friends" function(request, response) {
