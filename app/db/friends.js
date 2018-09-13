@@ -71,5 +71,5 @@ var friends = [
   }
 ];
 
-// Module.exports gives us access to this array
+// Module.exports makes this information accessible using require
 module.exports = friends;
