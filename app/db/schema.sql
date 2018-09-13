@@ -30,7 +30,5 @@ CREATE TABLE users (
 	name VARCHAR(42) NOT NULL,
 	email VARCHAR(42) NOT NULL,
   picture TEXT NOT NULL,
-	min INT (2) NOT NULL,
-	max INT (2) NOT NULL,
 	PRIMARY KEY (id)
 );

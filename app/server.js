@@ -18,18 +18,17 @@ var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "friends_db"
+  database: "friendFinder_db"
 });
 
-connection.connect();
+// connection.connect();
 
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
     return;
   }
-
-  console.log("connected as id " + connection.threadId);
+  // console.log("connected as id " + connection.threadId);
 });
 
 // app.use(bodyParser.json()) basically tells the system that you want json to be used. bodyParser.urlencoded({extended: ...}) basically tells the system whether you want to use a simple algorithm for shallow parsing (i.e. false) or complex algorithm for deep parsing that can deal with nested objects (i.e. true)
