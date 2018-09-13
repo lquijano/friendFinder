@@ -10,6 +10,8 @@ var mysql = require("mysql");
 // this tells node we are creating an express server
 var app = express();
 
+app.use(methodOverride("X-HTTP-Method-Override"));
+
 var PORT = 8080;
 
 var connection = mysql.createConnection({

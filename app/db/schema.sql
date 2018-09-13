@@ -2,12 +2,34 @@ DROP  DATABASE IF EXISTS friendFinder_db;
 
 CREATE DATABASE friendFinder_db;
 
-USE meetMutt_db;
+USE friendFinder_db;
 
-CREATE TABLE friends_db (
+CREATE TABLE questions (
+	id INT NOT NULL AUTO_INCREMENT,
+	questions TEXT NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE answers (
+	id INT NOT NULL AUTO_INCREMENT,
+	answers TEXT NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE survey (
 	id INT NOT NULL AUTO_INCREMENT,
 	name VARCHAR(42) NOT NULL,
 	picture TEXT NOT NULL,
+	min INT (2) NOT NULL,
+	max INT (2) NOT NULL,
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE users (
+	id INT NOT NULL AUTO_INCREMENT,
+	name VARCHAR(42) NOT NULL,
+	email VARCHAR(42) NOT NULL,
+  picture TEXT NOT NULL,
 	min INT (2) NOT NULL,
 	max INT (2) NOT NULL,
 	PRIMARY KEY (id)
