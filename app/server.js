@@ -23,6 +23,10 @@ app.use(bodyParser.json());
 app.set("view engine", "ejs");
 // use res.render to load up an ejs view file
 
+require("./routing/apiRoutes")(app);
+
+require("./routing/htmlRoutes")(app);
+
 app.listen(PORT, function() {
   console.log("app is listening on: " + PORT);
 });
